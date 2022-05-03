@@ -1,1 +1,44 @@
-<p>user-detail works!</p>
+<div *ngIf="user" class="container">
+  <h1>User Details:</h1>
+  <img
+    src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"
+  />
+  <form>
+    <div class="input__section">
+      <span for="name">Name</span>
+      <input
+        name="name"
+        type="text"
+        [value]="user.name"
+        [disabled]="!user.isAdmin"
+      />
+    </div>
+    <div class="input__section">
+      <span for="username">Username</span>
+      <input
+        name="username"
+        type="text"
+        [value]="user.username"
+        [disabled]="!user.isAdmin"
+      />
+    </div>
+    <div class="input__section">
+      <span for="email">Email</span>
+      <input
+        name="email"
+        type="email"
+        [value]="user.email"
+        [disabled]="!user.isAdmin"
+      />
+    </div>
+    <div class="input__section">
+      <span for="birthdate">Birthdate</span>
+      <input
+        name="birthdate"
+        type="date"
+        [value]="user.birthdate"
+        [disabled]="!user.isAdmin"
+      />
+    </div>
+  </form>
+</div>

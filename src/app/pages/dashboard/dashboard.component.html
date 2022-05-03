@@ -2,13 +2,19 @@
   <h1>List of Users:</h1>
   <ul>
     <li *ngFor="let user of showUsers">
-      {{ user.name }}
+      <div class="item__info">
+        <img
+          src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"
+        />
+        <span>{{ user.name }}</span>
+      </div>
+
       <div class="item__options">
         <a [routerLink]="['/user', user.username]"
           ><img src="../../../assets/images/view.png"
         /></a>
-        <img src="../../../assets/images/editing.png" />
-        <img src="../../../assets/images/bin.png" />
+        <img *ngIf="isAdmin" src="../../../assets/images/editing.png" />
+        <img *ngIf="isAdmin" src="../../../assets/images/bin.png" />
       </div>
     </li>
   </ul>
