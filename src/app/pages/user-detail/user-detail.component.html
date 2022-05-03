@@ -10,7 +10,8 @@
         name="name"
         type="text"
         [value]="user.name"
-        [disabled]="!user.isAdmin"
+        [disabled]="isAdmin"
+        [(ngModel)]="user.name"
       />
     </div>
     <div class="input__section">
@@ -19,7 +20,8 @@
         name="username"
         type="text"
         [value]="user.username"
-        [disabled]="!user.isAdmin"
+        [(ngModel)]="user.username"
+        [disabled]="isAdmin"
       />
     </div>
     <div class="input__section">
@@ -28,7 +30,8 @@
         name="email"
         type="email"
         [value]="user.email"
-        [disabled]="!user.isAdmin"
+        [(ngModel)]="user.email"
+        [disabled]="isAdmin"
       />
     </div>
     <div class="input__section">
@@ -37,8 +40,20 @@
         name="birthdate"
         type="date"
         [value]="user.birthdate"
-        [disabled]="!user.isAdmin"
+        [(ngModel)]="user.birthdate"
+        [disabled]="isAdmin"
       />
     </div>
+    <div class="input__section">
+      <span>Admin</span>
+      <input
+        type="checkbox"
+        name="isAdmin"
+        [value]="user.isAdmin"
+        [(ngModel)]="user.isAdmin"
+        [disabled]="isAdmin"
+      />
+    </div>
+    <button (click)="editUser()">Edit</button>
   </form>
 </div>

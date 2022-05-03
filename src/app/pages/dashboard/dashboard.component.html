@@ -13,8 +13,14 @@
         <a [routerLink]="['/user', user.username]"
           ><img src="../../../assets/images/view.png"
         /></a>
-        <img *ngIf="isAdmin" src="../../../assets/images/editing.png" />
-        <img *ngIf="isAdmin" src="../../../assets/images/bin.png" />
+        <a [routerLink]="['/user', user.username]"
+          ><img *ngIf="isAdmin" src="../../../assets/images/editing.png"
+        /></a>
+        <img
+          (click)="deleteUser(user.username)"
+          *ngIf="isAdmin"
+          src="../../../assets/images/bin.png"
+        />
       </div>
     </li>
   </ul>

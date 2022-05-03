@@ -38,6 +38,9 @@ export class DashboardComponent implements OnInit, OnDestroy {
     );
   }
 
+  deleteUser(username: string) {
+    this.userService.deleteUser(username).subscribe((res) => console.log(res));
+  }
   paginationUsers(num: number): void {
     this.numPage += num;
     const index = this.numPage * 10;
