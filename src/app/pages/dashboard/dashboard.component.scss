@@ -1,0 +1,39 @@
+li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:.5rem;
+  border:1px solid black;
+  padding:.5rem 1rem;
+  border-radius: 50px;
+}
+
+ul{
+  min-width: 50%
+}
+img{
+  width: 30px;
+  // &:hover{
+  //   cursor:pointer
+  // }
+}
+
+.item__options{
+  display: flex;
+  gap:.5rem;
+  align-items: center;
+}
+
+.button__pagination{
+  background-color: lightblue;
+  padding: 1rem;
+  margin:0 1rem;
+  border-radius: 8px;
+}
+.button__pagination:disabled{
+  background-color: lightgray;
+}
+img:hover{
+  transform: rotate(10deg) scale(1.1);
+  transition: all .5s ease;
+}

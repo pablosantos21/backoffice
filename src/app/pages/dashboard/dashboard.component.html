@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>List of Users:</h1>
+  <ul>
+    <li *ngFor="let user of showUsers">
+      {{ user.name }}
+      <div class="item__options">
+        <a [routerLink]="['/user', user.username]"
+          ><img src="../../../assets/images/view.png"
+        /></a>
+        <img src="../../../assets/images/editing.png" />
+        <img src="../../../assets/images/bin.png" />
+      </div>
+    </li>
+  </ul>
+  <div *ngIf="users.length > 10">
+    <button
+      class="button__pagination"
+      (click)="paginationUsers(-1)"
+      [disabled]="numPage === 0"
+    >
+      prev
+    </button>
+    <span>{{ numPage + 1 }}</span>
+    <button
+      class="button__pagination"
+      (click)="paginationUsers(1)"
+      [disabled]="numPage === maxNumPage - 1"
+    >
+      next
+    </button>
+  </div>
+</div>
