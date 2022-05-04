@@ -1,0 +1,15 @@
+<div class="header">
+  <span class="title" (click)="toHomePage()">BACKOFFICE APP</span>
+  <div class="align-right" *ngIf="!logged">
+    <button class="primary-button noFlash" (click)="toLogIn()">Log In</button>
+    <button class="secondary-button noFlash" (click)="toSignUp()">
+      Sign Up
+    </button>
+  </div>
+  <div class="align-right" *ngIf="logged && admin">
+    <!-- Aquí botones que aparecen si estas logueado y eres un admin -->
+  </div>
+  <div class="align-right" *ngIf="logged && !admin">
+    <!-- Aqui botones que aparecen si estas logueado y eres un user normal -->
+  </div>
+</div>

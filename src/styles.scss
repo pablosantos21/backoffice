@@ -1,18 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
-.container{
+.container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-button{
-  border:0;
+button {
+  border: 0;
   background-color: white;
 }
-ul{
-  margin:0;
-  padding:0;
+ul {
+  margin: 0;
+  padding: 0;
 }
-li{
+li {
   list-style: none;
+}
+:root {
+  --primary-color: #2c4bff;
+  --secondary-color: #f3afb9;
+  --primary-color-dark: #121e66;
+  --primary-color-light: #6b81ff;
+}
+.title {
+  font-size: xx-large;
+  font-family: fantasy;
+}
+.header {
+  font-family: Roboto;
+  color: var(--primary-color);
 }
