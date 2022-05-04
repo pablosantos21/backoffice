@@ -30,8 +30,8 @@ export class UserDetailComponent implements OnInit, OnDestroy {
   }
   ngOnInit(): void {
     const username = this.route.snapshot.paramMap.get('username');
-    this.subscription = this.authService.isAdmin.subscribe(
-      (res) => (this.isAdmin = res)
+    this.subscription = this.authService.user.subscribe(
+      (res) => (this.isAdmin = res.isAdmin)
     );
     if (!username) {
       this.router.navigate(['/dashboard']);

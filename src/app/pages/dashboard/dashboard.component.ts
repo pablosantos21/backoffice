@@ -22,8 +22,8 @@ export class DashboardComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.subscription = this.authService.isAdmin.subscribe(
-      (res) => (this.isAdmin = res)
+    this.subscription = this.authService.user.subscribe(
+      (res) => (this.isAdmin = res.isAdmin)
     );
     this.subscription.add(
       this.userService.getUsers().subscribe((res: any) => {
