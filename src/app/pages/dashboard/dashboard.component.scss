@@ -11,17 +11,25 @@ li{
 ul{
   min-width: 50%
 }
-img{
-  width: 30px;
-  // &:hover{
-  //   cursor:pointer
-  // }
-}
 
-.item__options{
+.item__info{
+  img{
+    width: 50px;
+  }
+}
+.item__options, .item__info{
   display: flex;
   gap:.5rem;
   align-items: center;
+}
+.item__options{
+  img{
+    width: 30px;
+  }
+  img:hover{
+    transform: rotate(10deg) scale(1.1);
+    transition: all .5s ease;
+  }
 }
 
 .button__pagination{
@@ -32,8 +40,4 @@ img{
 }
 .button__pagination:disabled{
   background-color: lightgray;
-}
-img:hover{
-  transform: rotate(10deg) scale(1.1);
-  transition: all .5s ease;
 }

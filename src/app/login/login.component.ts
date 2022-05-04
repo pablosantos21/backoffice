@@ -27,6 +27,9 @@ export class LoginComponent implements OnInit, OnDestroy {
       .signIn(credentials)
       .subscribe((res: any) => {
         if (res && res.access_token) {
+          if (res.isAdmin) {
+            this.authService.isAdmin.next(true);
+          }
           localStorage.setItem('token', res.access_token);
           this.router.navigate(['dashboard']);
         }

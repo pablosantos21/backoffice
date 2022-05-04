@@ -14,7 +14,11 @@ export class UserService {
     return this.http.get(this.baseUrl + 'show');
   }
 
-  getUserByUsername(username: string) {
+  getUser(username: string) {
     return this.http.get(this.baseUrl);
+  }
+
+  deleteUser(username: string) {
+    return this.http.post(this.baseUrl, username);
   }
 }
