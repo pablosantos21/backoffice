@@ -8,7 +8,10 @@ import { environment } from 'src/environments/environment';
 })
 export class AuthService {
   baseUrl = environment.api;
-  isAdmin: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  user: BehaviorSubject<any> = new BehaviorSubject<any>({
+    isAdmin: false,
+    token: '',
+  });
   constructor(private http: HttpClient) {}
 
   signIn(credentials: any) {
