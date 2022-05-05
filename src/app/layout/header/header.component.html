@@ -1,15 +1,11 @@
-<div class="header">
-  <span class="title" (click)="toHomePage()">BACKOFFICE APP</span>
-  <div class="align-right" *ngIf="!logged">
-    <button class="primary-button noFlash" (click)="toLogIn()">Log In</button>
-    <button class="secondary-button noFlash" (click)="toSignUp()">
-      Sign Up
-    </button>
+<header class="header">
+  <a class="title" [routerLink]="'login'">BACKOFFICE APP</a>
+  <div *ngIf="!logged">
+    <a class="button" [routerLink]="'login'">Log In</a>
+    <a class="button" [routerLink]="'register'">Sign Up</a>
   </div>
-  <div class="align-right" *ngIf="logged && admin">
+  <div class="align-right" *ngIf="logged">
+    <a class="button" [routerLink]="'login'">Sign Out</a>
     <!-- Aquí botones que aparecen si estas logueado y eres un admin -->
   </div>
-  <div class="align-right" *ngIf="logged && !admin">
-    <!-- Aqui botones que aparecen si estas logueado y eres un user normal -->
-  </div>
-</div>
+</header>

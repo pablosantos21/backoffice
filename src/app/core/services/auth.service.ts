@@ -21,4 +21,8 @@ export class AuthService {
   signUp(credentials: any) {
     return this.http.post(this.baseUrl + 'auth/signup', credentials);
   }
+
+  isLoggedIn(): boolean {
+    return false;
+  }
 }

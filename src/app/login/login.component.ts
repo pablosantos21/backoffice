@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   login() {
     const credentials = {
-      usernameOrEmail: this.usernameOrEmail,
+      username: this.usernameOrEmail,
       password: this.password,
     };
 

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -7,29 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Input() logged: boolean = false;
-  @Input() admin: boolean = false;
+  logged: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
-  ngOnInit(): void {}
-
-  toHomePage() {
-    if (this.logged == false) {
-      this.router.navigate(['homePage']);
-    } else {
-      if (this.admin == false) {
-        this.router.navigate(['loggedHomePage']);
-      } else {
-        this.router.navigate(['adminHomePage']);
+  ngOnInit(): void {
+    this.authService.user.subscribe((user: any) => {
+      if(user.token){
+        this.logged=true;
       }
-    }
+    });
   }
 
-  toLogIn() {
-    this.router.navigate(['login']);
-  }
-  toSignUp() {
-    this.router.navigate(['register']);
-  }
 }
