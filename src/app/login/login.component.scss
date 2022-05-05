@@ -8,3 +8,39 @@ form{
 span{
   margin-top:1rem
 }
+.title{
+  font-size: xx-large;
+  font-family: fantasy;
+  letter-spacing: 5px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.input{
+  font-size: x-large;
+  border-radius: 8px;
+  border: 2px solid var(--primary-color-dark);
+  transition-duration: 3s;
+  text-align: center;
+}
+.input:hover{
+  background-color: var(--secondary-color);
+}
+.button{
+  margin-top: 30px;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  display: flex ;
+  justify-content: center;
+  font-size: x-large;
+  font-family: fantasy;
+  border: 2px solid var(--primary-color-dark);
+  width: 150px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 2px 3px rgb(201, 199, 199);
+}
+.button:active {
+  box-shadow: none;
+  transform: translateY(3px) translateX(2px);
+}

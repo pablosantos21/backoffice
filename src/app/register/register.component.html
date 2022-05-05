@@ -1,7 +1,8 @@
 <div class="container">
   <form method="post">
-    <h1>Register</h1>
+    <h1 class="title">REGISTER</h1>
     <input
+      class="input"
       type="text"
       [(ngModel)]="name"
       placeholder="Name"
@@ -9,6 +10,7 @@
       required="required"
     />
     <input
+      class="input"
       type="text"
       [(ngModel)]="username"
       placeholder="Username"
@@ -16,6 +18,7 @@
       required="required"
     />
     <input
+      class="input"
       type="email"
       [(ngModel)]="email"
       placeholder="Email"
@@ -23,14 +26,15 @@
       required="required"
     />
     <input
+      class="input"
       type="password"
       [(ngModel)]="password"
       placeholder="Password"
       name="password"
       required="required"
     />
-    <input type="date" [(ngModel)]="birthdate" name="birthdate" />
-    <button type="submit" (click)="register()">Register</button>
+    <input class="input" type="date" [(ngModel)]="birthdate" name="birthdate" />
+    <button class= "button" type="submit" (click)="register()">Submit</button>
   </form>
-  <span>Already register? <a [routerLink]="'/login'">sign in here</a></span>
+  <span>Already registered? <a [routerLink]="'/login'">Sign in here</a></span>
 </div>
