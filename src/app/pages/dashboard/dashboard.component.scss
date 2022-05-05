@@ -3,9 +3,7 @@ li{
   justify-content: space-between;
   align-items: center;
   margin:.5rem;
-  border:1px solid black;
   padding:.5rem 1rem;
-  border-radius: 50px;
 }
 
 ul{
@@ -40,4 +38,29 @@ ul{
 }
 .button__pagination:disabled{
   background-color: lightgray;
+}
+.title{
+  font-size: xx-large;
+  font-family: fantasy;
+  letter-spacing: 5px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.card{
+  background-image: url('../../../assets/images/icono-plano-vista-lateral-crucero-oceano-barco-viaje-viaje-transporte_159757-176.png');
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba($color: #3ed9f5, $alpha: 1.0);
+  border-radius: 20px;
+  border: 2px solid black
+  
+}
+.card:hover{
+  background-image: url('../../../assets/images/images.png');
+  transition-duration: 3s;
+}
+.container{
+  height: 800px;
 }

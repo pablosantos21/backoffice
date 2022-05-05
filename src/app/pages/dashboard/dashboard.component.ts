@@ -11,7 +11,36 @@ import { UserService } from '../services/user.service';
 })
 export class DashboardComponent implements OnInit, OnDestroy {
   users: User[] = [];
-  showUsers: User[] = [];
+  showUsers: User[] = [
+    // {
+    //   name: 'Borja',
+    //   username: 'CssExpert',
+    //   email: 'borja@borja.com',
+    //   birthdate: new Date('1999-01-16'),
+    //   isAdmin: false,
+    // },
+    // {
+    //   name: 'Pablo',
+    //   username: 'CapitanAlMando',
+    //   email: 'pablo@pablo.com',
+    //   birthdate: new Date('1997-01-16'),
+    //   isAdmin: false,
+    // },
+    // {
+    //   name: 'Héctor',
+    //   username: 'MisterMaquinaria',
+    //   email: 'hector@hector.com',
+    //   birthdate: new Date('1999-01-16'),
+    //   isAdmin: false,
+    // },
+    // {
+    //   name: 'Adam',
+    //   username: 'Lavaplatos',
+    //   email: 'adam@adam.com',
+    //   birthdate: new Date('1997-01-16'),
+    //   isAdmin: false,
+    // },
+  ];
   numPage: number = 0;
   maxNumPage: number = 9999;
   subscription!: Subscription;
